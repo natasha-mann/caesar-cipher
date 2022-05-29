@@ -14,10 +14,12 @@ fn main() {
     let collection = data.split("\n").collect::<Vec<&str>>();  
     let contents: &[&str] = collection.as_slice();
 
+    let shift = 2;
+
     let start = Instant::now();
 
     // Run main function
-    let result: String = transformer::transform_text(contents, 2);
+    let result: String = transformer::transform_text(contents, shift);
 
     let duration = start.elapsed();
 

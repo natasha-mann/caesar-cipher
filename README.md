@@ -20,6 +20,8 @@ git clone git@github.com:natasha-mann/caesar-cipher.git
 cargo run
 ```
 
+The shift value is currently set at 2. The value of this can be changed on line 17 of `main.rs`
+
 #### Tests
 
 To test the application run:
