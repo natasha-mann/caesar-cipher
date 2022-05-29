@@ -27,8 +27,8 @@ fn main() {
     // Create output file and write results
     let mut file = File::create("result.txt").unwrap();
     writeln!(&mut file, "{}", result).unwrap();
-
+    
     // Time taken
-    println!("Time elapsed in expensive_function() is: {:?}", duration);
+    println!("Time elapsed in transform_text function is: {:?}", duration);
 }
 
