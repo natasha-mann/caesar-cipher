@@ -10,7 +10,6 @@ pub fn transform_text(input: &[&str], shift: i8)->String {
   let chunks =  input.chunks(( input.len() / 50).max(1));
   let mut handles = Vec::new();
 
-  
   for chunk in chunks {
 
     let string = chunk.join("");
@@ -21,8 +20,10 @@ pub fn transform_text(input: &[&str], shift: i8)->String {
         let cipher_letter: char = cipher::cipher(c, shift);
         chunk_result.push(cipher_letter);
     }
+
    return chunk_result;
     });
+
     handles.push(handle);
 }
 
