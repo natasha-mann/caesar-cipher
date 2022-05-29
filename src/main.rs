@@ -8,8 +8,12 @@ mod transformer;
 fn main() {
     const FILENAME:&str = "./prideAndPrejudice.txt";
 
-    let contents = fs::read_to_string(FILENAME)
+    let data = fs::read_to_string(FILENAME)
     .expect("Something went wrong reading the file");
+    
+    let collection = data.split("\n").collect::<Vec<&str>>();  
+
+    let contents: &[&str] = collection.as_slice();
 
     let start = Instant::now();
 
